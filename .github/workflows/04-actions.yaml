@@ -7,6 +7,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/Checkout@v4
-      
-      - name: printing folders
-        run: ls
+
+      - name: Setup node
+        run: |
+              cd ../..
+              cd react-app
+              npm ci
+        
