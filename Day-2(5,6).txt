@@ -6,3 +6,11 @@ Github hosted -- Windows & ubuntu & mac (steps run on the same VM but the jobs d
 Self hosted -- Run workflows on any infrastruture of your choice.
                Full control over the VM infrastruture. Can be added at the repo, organization or enterprise level.
                Jobs do not necessarily have to run or clean instance.
+              
+
+Actions
+--------
+=> Custom actions to perform complex, frequently repeadted tasks.
+=> It enables great flexibility and reusablility.
+
+=> we can also create our own actions for public/private use.
