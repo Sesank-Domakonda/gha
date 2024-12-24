@@ -12,7 +12,8 @@ jobs:
       runs-on: windows-latest
       steps:
         - name: Show OS
-          run: "This job is running no a windows runner"
+          shell: bash
+          run: echo "this is ${{github.RUNNER_OS}}"
     
   macos-latest:
       runs-on: macos-latest
