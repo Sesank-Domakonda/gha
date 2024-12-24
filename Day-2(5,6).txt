@@ -1,0 +1,8 @@
+Workflow Runners
+-----------------
+=> Virtual Server that execute jobs from Workflows
+
+Github hosted -- Windows & ubuntu & mac (steps run on the same VM but the jobs don't)
+Self hosted -- Run workflows on any infrastruture of your choice.
+               Full control over the VM infrastruture. Can be added at the repo, organization or enterprise level.
+               Jobs do not necessarily have to run or clean instance.
