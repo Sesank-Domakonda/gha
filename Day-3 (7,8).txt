@@ -1,0 +1,52 @@
+Event Filters
+==============
+=> Specify under which conditions a specific event triggers out workflow.
+
+ex:
+push event
+-----------
+=> branches -specifies which branch must match in order for the workflow to execute
+=> branches_ignore - specifies which branches must not match in order for the workflow to execute
+=> tags, tags_ignore, paths, paths_ignore
+
+Note: If multiple filter are specified then all of them must be satisfied for the workflow to run.
+
+https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
+
+Use this documentation to gknow what all you can include in the workflows.
+
+Activity Types
+===============
+=> They specify which types of certain triggers execute our workflow
+
+ex: pull_request event
+opened, closed, assigned
+
+Difference between activity types and event filters
+---------------------------------------------------
+
+Activity Types:
+These are the specific events that can trigger a workflow in GitHub Actions. Think of them as categories of actions that GitHub recognizes and can respond to. For example:
+
+Push Event: Happens when code is pushed to the repository.
+
+Pull Request Event: Happens when a pull request is opened, updated, or closed.
+
+Issue Comment Event: Happens when someone comments on an issue.
+
+Event Filters:
+Within these activity types, you can apply filters to further narrow down when the workflow should be triggered. Filters specify more precise conditions. Here are some examples of how you might use filters:
+
+Branch Filter: Only trigger the workflow if the push or pull request is to specific branches, like main or develop.
+
+yaml
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+
+
+https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+all the activity types for the filters.

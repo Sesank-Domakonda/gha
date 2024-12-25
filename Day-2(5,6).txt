@@ -14,3 +14,32 @@ Actions
 => It enables great flexibility and reusablility.
 
 => we can also create our own actions for public/private use.
+
+default key: used to set default values for run settings in all jobs and steps within a workflow.
+we can use defaults keyword at the job definition level (sibling to runs-on).
+ex:jobs:
+   runs-on: ubuntu-latest
+    defaults:
+        run: 
+          working-directory: 04-using-actions/react-app
+
+ex2:
+jobs:
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      shell: bash
+      working-directory: ./scripts
+
+
+so every step in the job runs in the specified working directory.
+
+step level
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Install deps
+      run: npm ci
+      working-directory: 04-using-actions/react-app
+
