@@ -2,8 +2,7 @@ name: 05-1-Event filters and Activity Types
 on: 
   pull_request:
     types:
-      - opened
-      - synchronize
+      - closed
 
     branches:
       - main
