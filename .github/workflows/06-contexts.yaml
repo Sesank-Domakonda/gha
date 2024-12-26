@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: Display Information
         run: |
-             "Event name: ${{github.event}}"
-             "Ref: ${{github.ref}}"
-             "SHA: ${{github.sha}}"
-             "Actor ${{github.workflow}}"
-             "Run ID: ${{github.run_id}}"
-             "Run number: ${{github.run_number}}"
+             echo "Event name: ${{github.event}}"
+             echo "Ref: ${{github.ref}}"
+             echo "SHA: ${{github.sha}}"
+             echo "Actor ${{github.workflow}}"
+             echo "Run ID: ${{github.run_id}}"
+             echo "Run number: ${{github.run_number}}"
             
       - name: Retrieve variable
         run: echo "${{vars.MY_VAR}}"
