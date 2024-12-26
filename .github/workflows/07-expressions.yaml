@@ -1,6 +1,6 @@
 name: 07- Using expressions
+run-name: 07- Using expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF'}} #if the inputs.debug is defined then print ON otherwise OFF
 on: 
-  push:
   workflow_dispatch: 
     inputs:
       debug:
