@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Display Information
         run: |
-             "Event name: ${{github.Event}}"
+             "Event name: ${{github.event}}"
              "Ref: ${{github.ref}}"
              "SHA: ${{github.sha}}"
              "Actor ${{github.workflow}}"
