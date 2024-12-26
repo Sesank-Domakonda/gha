@@ -1,0 +1,5 @@
+Expressions
+-----------
+=> Use dynamic values and expressions in workflows.
+=> They must be declared with the ${{<expression>}} syntax
+It can be a combination of Literal values, Context values, Functions
