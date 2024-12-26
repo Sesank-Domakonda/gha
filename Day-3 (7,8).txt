@@ -50,3 +50,17 @@ on:
 
 https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
 all the activity types for the filters.
+
+
+Workflow contexts
+==================
+=> Access information about runs, variables, jobs and much more.
+Github provides multiple sources of data in different contexts so that we can easily provide all the necessary information to our workflows.
+
+*github
+*env
+*inputs
+*vars
+
+
+https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs
