@@ -3,3 +3,23 @@ Expressions
 => Use dynamic values and expressions in workflows.
 => They must be declared with the ${{<expression>}} syntax
 It can be a combination of Literal values, Context values, Functions
+
+Look at 07 -workflows
+
+
+Variables (Refer the 08 workflow)
+---------
+=> We can set and reuse variables We can set variables at
+* Workflow level
+* job level
+* step level
+
+var at ste > job > workflow
+
+we can set the variables with env keyword.
+
+
+For variables used in multiple workflows we can define them at the 
+* organization level
+* repository level
+* environment level
