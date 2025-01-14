@@ -1,12 +1,15 @@
 name: 04-using-actions
 on: 
-  push:
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      working-directory: 04-using-actions\react-app
     steps:
       - name: Checkout Code
+        workdir: 04
         uses: actions/checkout@v4
 
       - name: Printing Folders

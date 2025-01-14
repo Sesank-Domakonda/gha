@@ -43,3 +43,11 @@ jobs:
       run: npm ci
       working-directory: 04-using-actions/react-app
 
+=> we can define the workdir ar teh job level also
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults: // this indicates that we can set a default working directory to all the steps in the job.
+      run:
+        working-directory: 04-using-actions/react-app

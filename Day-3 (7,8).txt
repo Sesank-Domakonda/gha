@@ -1,6 +1,6 @@
 Event Filters
 ==============
-=> Specify under which conditions a specific event triggers out workflow.
+=> Filters that refine which events/conditions within an event trigger a workflow.
 
 ex:
 push event
@@ -13,7 +13,7 @@ Note: If multiple filter are specified then all of them must be satisfied for th
 
 https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
 
-Use this documentation to gknow what all you can include in the workflows.
+Use this documentation to know what all you can include in the workflows.
 
 Activity Types
 ===============
