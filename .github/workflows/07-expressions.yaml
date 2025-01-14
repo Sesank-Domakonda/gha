@@ -25,6 +25,3 @@ jobs:
 
       - name: Greeting
         run: echo "Hello World"
-
-
-        
