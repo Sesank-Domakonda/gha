@@ -27,3 +27,22 @@ For variables used in multiple workflows we can define them at the
 var at env > repo > org
 
 we can retrieve the environment variables with the ${{env.MY_VARIABLE}}
+
+
+
+Functions
+----------
+
+General purpose Functions
+--------------------------
+=> set of  functions to interact with data from multiple contexts and model complex behavior like more control of the workflow and job execution.
+ex: contains(), startsWith(), endsWith()...
+
+
+Status check functions
+------------------------
+=> we use them to check the status of workflow, previous jobs or steps to define whether a certain job.step should be executed.
+failure() - executes the job/step only if any of the previous jobs/steps failed.
+success() - true when everything before the job has been executed successfully.
+always() - executes the job/steps regardless of the outcome of previous jobs/steps.
+cancelled() - used to execute jobs/steps only if the worklfow run was cancelled intentionally.

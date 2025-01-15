@@ -6,7 +6,7 @@ on:
 env: 
   WORKFLOW_VAR : 'I am a workflow env var'
   OVERWRITTEN : 'I will be overwritten'
-  UNDEFINED_VAR_WITH_DEFAULT: 'default value'
+  UNDEFINED_VAR_WITH_DEFAULT: ${{vars.UNDEFINED_VAR || 'default value'}}
 
 jobs:
   echo:
@@ -51,4 +51,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print undefined variables
-        run: "Org var: ${{env.UNDEFINED_VAR_WITH_DEFAULT}}"
+        run: "Org var: ${{vars.UNDEFINED_VAR || 'default value'}}"
