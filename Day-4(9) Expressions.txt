@@ -23,3 +23,7 @@ For variables used in multiple workflows we can define them at the
 * organization level
 * repository level
 * environment level
+
+var at env > repo > org
+
+we can retrieve the environment variables with the ${{env.MY_VARIABLE}}
