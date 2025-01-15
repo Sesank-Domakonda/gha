@@ -21,3 +21,11 @@ joba:
       - job2
   job4:
     needs: job1
+
+
+Inputs and Outputs
+===================
+
+Inputs: We can create flexible workflows by providing inputs. They enable us to request specific info from the workflow and use the info at the run time.
+
+ 
