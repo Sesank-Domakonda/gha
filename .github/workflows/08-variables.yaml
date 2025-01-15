@@ -1,6 +1,5 @@
 name: 08-variables
 on:
-  push:
   workflow_dispatch: 
 
 env: 
@@ -22,7 +21,7 @@ jobs:
               echo "Step env var: ${{env.STEP_VAR}}"
               echo "Step env var: ${{env.STEP_VAR2}}"
               echo "Step env var: ${{env.JOB_VAR}}"
-              echo "Step env var: ${{env.WORKFLOW_VARK}}"
+              echo "Step env var: ${{env.WORKFLOW_VAR}}"
               echo "Step env var: ${{env.OVERWRITTEN}}"
 
       - name: Overwrite Job variable
