@@ -1,0 +1,23 @@
+Controlling the execution flow
+==============================
+* standard execution
+* conditional execution
+
+jobs:              Start
+  job1:                -> job1
+  job1:                -> job2
+  job1:                -> job3
+  job1:                -> job4
+  job1:
+
+Dependent execution
+-------------------
+joba:
+  job1:
+  job2:
+  job3:
+    needs:
+      - job1
+      - job2
+  job4:
+    needs: job1
