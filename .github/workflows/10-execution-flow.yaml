@@ -21,7 +21,7 @@ jobs:
 
       - name: Failing tests
         if: ${{ github.event.inputs.pass-unit-tests == 'false'}}
-        run: 
+        run: echo "failing tests"
 
   deploy-nonprod:
     runs-on: ubuntu-latest
