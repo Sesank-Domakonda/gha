@@ -23,9 +23,40 @@ joba:
     needs: job1
 
 
-Inputs and Outputs
-===================
+Inputs 
+=======
 
 Inputs: We can create flexible workflows by providing inputs. They enable us to request specific info from the workflow and use the info at the run time.
 
+we can define inputs at different places.
  
+
+Outputs
+========
+=> Output data from jobs for later usage.
+
+to get the output from the jobs we need to 
+* define a step ID for the steps that produce outputs (id: step1)
+*  Echo key value pairs to the $GITHUB_OUTPUT variable (echo "Name=Lauro" >> $GITHUB_OUTPUT)
+*  Mention the outputs in the outputs section of the job. 
+  outputs:
+    name: ${{ steps.step1.outputs.NAME }} //steps.step_id.outputs.Key
+* mention the job which has this output as a dependency into the job which need output.
+* Access the putput via the needs context.
+
+ex:
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    outputs:
+      name: ${{steps.step1.outputs.NAME}}  // steps.
+    steps:
+      - id: step1 
+        run: echo "NAME=Lauro" >> "$GITHUB_OUTPUT"
+  
+  goodbye:
+    runs-on: ubuntu-latest
+    needs: welcome
+    steps:
+      - run: echo "Bye, ${{needs.welcome.outputs.name}}"
+
