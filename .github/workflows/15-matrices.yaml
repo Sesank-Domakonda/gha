@@ -1,9 +1,10 @@
 name: 15-matrices
-on: workflow_dispatch
+on: 
+  workflow_dispatch
 
 jobs:
   backwards-compatibility:
-    runs-on: ${{matrix.node-version}}.
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
         node-version:
@@ -12,12 +13,12 @@ jobs:
           - 21.x
         os:
           - ubuntu-latest
-          - windows-latesr
-          steps:
-            - name: Setup node
-              uses: actions/setup-node
-              with:
-                node-version: ${{matrix.node-version}}
+          - windows-latest
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-            - name: Perform some tests
-              echo: echo "Running tests on OS ${{matrix.os}} and ${{matrix.node-version}}"
+      - name: Perform some tests
+        run: echo "Running tests on OS ${{matrix.os}} and ${{matrix.node-version}}"
