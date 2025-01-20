@@ -1,6 +1,6 @@
 name: Working with Matrices
 on: 
-  workflow_dispatch
+  push
 
 jobs:
   backwards-compatability:
