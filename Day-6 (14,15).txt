@@ -35,3 +35,13 @@ ubuntu-latest-18   macos-latest-18   windows-latest-18
 fail-fast
 ----------
 =>true:  declared understrategy, in a matrix all the other jobs are failed if one fails.
+
+
+
+Environments
+------------
+=> Create multiple environments with different rules for multiple environments.
+
+Note: 
+-----
+=> Environment variables we create are available with the vars context and secrets are available in the secrets context.

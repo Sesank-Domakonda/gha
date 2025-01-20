@@ -1,6 +1,6 @@
 name: Working with Matrices
 on: 
-  push
+  workflow_dispatch: 
 
 jobs:
   backwards-compatability:
@@ -61,6 +61,11 @@ jobs:
           
           - opacity: 100
             color: triangle
+
+        exclude:
+          - color: [green]
+            shape: circle
+
     steps:
       - name: Dummy step
         run: echo "${{matrix.color}}-${{matrix.shape}}-${{matrix.size}}-${{matrix.opacity}}"
