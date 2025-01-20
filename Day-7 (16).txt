@@ -3,4 +3,5 @@ Environments
 => Create multiple environmnets with different rules for multiple deployments.
 we declare it with the environment keyword.
 
-*The variables we declare in an environment are available in the vars context and the secrets are available in the secrets context.
+*vars context-  variables we declare in an environment are available here  
+* secrets - available in the secrets context.

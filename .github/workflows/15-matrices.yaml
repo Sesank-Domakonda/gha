@@ -1,10 +1,11 @@
-name: 15-matrices
+name: Working with Matrices
 on: 
   workflow_dispatch
 
 jobs:
-  backwards-compatibility:
-    runs-on: ${{matrix.os}}
+  backwards-compatability:
+    name: ${{matrix.os}}-${{matrix.node-version}}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version:
@@ -14,18 +15,12 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-        
-        include:
-          - os: ubuntu-latest
-            tag: linux
+
     steps:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      
-      - name: Fail if experimental
-        if: 
+          node-version: ${{matrix.node-version}}
 
       - name: Perform some tests
         run: echo "Running tests on OS ${{matrix.os}} and ${{matrix.node-version}}"
