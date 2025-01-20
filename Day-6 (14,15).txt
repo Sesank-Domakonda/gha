@@ -30,3 +30,8 @@ we get a cartesian product of os and node version like
 ubuntu-latest-14   macos-latest-14   windows-latest-14
 ubuntu-latest-16   macos-latest-16   windows-latest-16
 ubuntu-latest-18   macos-latest-18   windows-latest-18
+
+
+fail-fast
+----------
+=>true:  declared understrategy, in a matrix all the other jobs are failed if one fails.
