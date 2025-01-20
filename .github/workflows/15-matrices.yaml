@@ -7,7 +7,7 @@ jobs:
     name: ${{matrix.os}}-${{matrix.node-version}}
     runs-on: ${{matrix.os}}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         node-version:
           - 18.x
@@ -54,7 +54,13 @@ jobs:
             shape: triangle
           
           - opacity: 50
+            color: red 
 
+          - opacity: 75
+            color: circle
+          
+          - opacity: 100
+            color: triangle
     steps:
       - name: Dummy step
         run: echo "${{matrix.color}}-${{matrix.shape}}-${{matrix.size}}-${{matrix.opacity}}"
